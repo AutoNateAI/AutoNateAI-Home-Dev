@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AutoNateAI - Page Not Found</title>
+  <script type="text/javascript">
+    // Single-page app routing for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    var segmentCount = 1; // Number of segments in your path (1 for repo name)
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <h2>Page Not Found</h2>
+  <p>Redirecting to homepage...</p>
+</body>
+</html>
